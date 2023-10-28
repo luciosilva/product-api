@@ -40,10 +40,10 @@ public class ProductController {
     @PostMapping("/product")
     ProductDTO newProduct(@RequestBody ProductDTO productDTO) {
         return productService.save(productDTO);
-     }
+    }
 
-     @DeleteMapping("/product/{id}")
-     void delete(@PathVariable Long id) {
+    @DeleteMapping("/product/{id}")
+    void delete(@PathVariable Long id) {
         productService.delete(id);
-      }
+    }
 }
